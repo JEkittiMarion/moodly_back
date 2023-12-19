@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moods",
+  "info": {
+    "singularName": "mood",
+    "pluralName": "moods",
+    "displayName": "mood",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valeur": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "equipe": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "mood"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
